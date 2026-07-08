@@ -1,0 +1,26 @@
+def create_requirements(self):
+        """Cria requirements.txt"""
+        content = '''# Database
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.23
+
+# API
+fastapi==0.109.0
+uvicorn==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Performance
+uvloop==0.20.0
+
+# Utilities
+python-dotenv==1.0.0
+psutil==6.0.0
+
+# Development
+pytest==7.4.3
+black==23.12.1
+flake8==6.1.0
+'''
+        (self.base / 'requirements.txt').write_text(content)
+        print("✅ requirements.txt criado")
